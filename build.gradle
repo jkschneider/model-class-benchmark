@@ -1,0 +1,29 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:latest.release'
+    }
+}
+
+apply plugin: 'groovy'
+apply plugin: 'scala'
+apply plugin: 'kotlin'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.3.9'
+    compile 'org.projectlombok:lombok:latest.release'
+
+    compile 'org.scala-lang:scala-library:latest.release'
+    compile 'org.scala-lang:scala-compiler:latest.release'
+
+    compile 'org.jetbrains.kotlin:kotlin-stdlib:latest.release'
+
+    testCompile 'org.openjdk.jmh:jmh-core:latest.release'
+    testCompile 'org.openjdk.jmh:jmh-generator-annprocess:latest.release'
+}
