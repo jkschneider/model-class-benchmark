@@ -12,6 +12,8 @@ I'm impatient, so each benchmark is running with 20 warmups, 50 iterations, and 
     EqualsBenchmark.equalsLombok      avgt   50    30.019 ±   1.350  ns/op
     EqualsBenchmark.equalsScala       avgt   50    51.966 ±   2.416  ns/op
 
+**Note:** @danielthomas went deep by decompiling and comparing the bytecodes of Kotlin and Lombok generated equals methods, and they are essentially identical.
+
 ## hashCode()
 
     Benchmark                         Mode  Cnt     Score    Error  Units
