@@ -2,11 +2,13 @@ package com.netflix.model.groovy
 
 import groovy.transform.CompileStatic
 import groovy.transform.EqualsAndHashCode
+import groovy.transform.ToString
 import groovy.transform.TupleConstructor
 
 @CompileStatic
 @TupleConstructor
 @EqualsAndHashCode
+@ToString
 class GroovyModel {
     Integer integer
     List<String> list

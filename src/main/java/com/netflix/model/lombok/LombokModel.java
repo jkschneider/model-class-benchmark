@@ -2,10 +2,12 @@ package com.netflix.model.lombok;
 
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
+import lombok.ToString;
 
 import java.util.List;
 
 @AllArgsConstructor
+@ToString
 @EqualsAndHashCode(doNotUseGetters = true)
 public class LombokModel {
     Integer integer;

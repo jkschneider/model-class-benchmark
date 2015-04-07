@@ -11,12 +11,16 @@ apply plugin: 'groovy'
 apply plugin: 'scala'
 apply plugin: 'kotlin'
 
+tasks.withType(GroovyCompile) {
+    groovyOptions.optimizationOptions.indy = true
+}
+
 repositories {
     jcenter()
 }
 
 dependencies {
-    compile 'org.codehaus.groovy:groovy-all:2.3.9'
+    compile 'org.codehaus.groovy:groovy-all:2.3.9:indy'
     compile 'org.projectlombok:lombok:latest.release'
 
     compile 'org.scala-lang:scala-library:latest.release'
