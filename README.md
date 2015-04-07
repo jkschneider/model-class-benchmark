@@ -4,7 +4,7 @@ This is a quick study of the relative performance of the basic methods generated
 
 ## equals()
 
-    Benchmark              Mode  Cnt    Score   Error  Units
+    Benchmark                    Mode  Cnt    Score   Error  Units
     ModelBenchmark.equalsGroovy  avgt   50  111.227 ± 4.599  ns/op
     ModelBenchmark.equalsKotlin  avgt   50   87.103 ± 4.069  ns/op
     ModelBenchmark.equalsLombok  avgt   50   30.266 ± 1.682  ns/op
