@@ -8,8 +8,8 @@ I'm impatient, so each benchmark is running with 20 warmups, 50 iterations, and 
 
     Benchmark                         Mode  Cnt     Score    Error  Units
     EqualsBenchmark.equalsGroovy      avgt   50    57.035 ±   2.883  ns/op
-    EqualsBenchmark.equalsKotlin      avgt   50    80.416 ±   3.494  ns/op
-    EqualsBenchmark.equalsLombok      avgt   50    26.124 ±   1.156  ns/op
+    EqualsBenchmark.equalsKotlin      avgt   50    29.544 ±   1.269  ns/op
+    EqualsBenchmark.equalsLombok      avgt   50    30.019 ±   1.350  ns/op
     EqualsBenchmark.equalsScala       avgt   50    51.966 ±   2.416  ns/op
 
 ## hashCode()
