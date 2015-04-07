@@ -20,7 +20,7 @@ repositories {
 }
 
 dependencies {
-    compile 'org.codehaus.groovy:groovy-all:2.3.9:indy'
+    compile 'org.codehaus.groovy:groovy-all:2.4.3:indy'
     compile 'org.projectlombok:lombok:latest.release'
 
     compile 'org.scala-lang:scala-library:latest.release'
