@@ -14,6 +14,8 @@ I'm impatient, so each benchmark is running with 20 warmups, 50 iterations, and 
 
 **Note:** @danielthomas went deep by decompiling and comparing the bytecodes of Kotlin and Lombok generated equals methods, and they are essentially identical.
 
+**Note 2:** Groovy 2.3.9 scored over 1000 ns/op on `equals()` with a similar error margin as below.
+
 ## hashCode()
 
     Benchmark                         Mode  Cnt     Score    Error  Units
