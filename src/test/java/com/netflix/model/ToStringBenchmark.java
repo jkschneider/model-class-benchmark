@@ -16,6 +16,9 @@ public class ToStringBenchmark {
     @Benchmark public String toStringIntelliJ(IntelliJState state) {
         return state.m.toString();
     }
+    @Benchmark public String toStringEclipse(EclipseState state) {
+        return state.m.toString();
+    }
     @Benchmark public String toStringGroovy(GroovyState state) {
         return state.m.toString();
     }

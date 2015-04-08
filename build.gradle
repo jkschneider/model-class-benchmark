@@ -31,3 +31,9 @@ dependencies {
     testCompile 'org.openjdk.jmh:jmh-core:latest.release'
     testCompile 'org.openjdk.jmh:jmh-generator-annprocess:latest.release'
 }
+
+task run(type:JavaExec) {
+    dependsOn tasks.test
+    main = 'com.netflix.model.BenchmarkRunner'
+    classpath = sourceSets.test.runtimeClasspath
+}
