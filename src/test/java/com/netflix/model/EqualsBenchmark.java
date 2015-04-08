@@ -13,6 +13,9 @@ public class EqualsBenchmark {
     @Benchmark public boolean equalsJava(JavaState state) {
         return state.m.equals(state.m2);
     }
+    @Benchmark public boolean equalsIntelliJ(IntelliJState state) {
+        return state.m.equals(state.m2);
+    }
     @Benchmark public boolean equalsGroovy(GroovyState state) {
         return state.m.equals(state.m2);
     }

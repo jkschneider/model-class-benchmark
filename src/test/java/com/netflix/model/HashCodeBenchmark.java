@@ -13,6 +13,9 @@ public class HashCodeBenchmark {
     @Benchmark public int hashCodeJava(JavaState state) {
         return state.m.hashCode() + state.m2.hashCode();
     }
+    @Benchmark public int hashCodeIntelliJ(IntelliJState state) {
+        return state.m.hashCode() + state.m2.hashCode();
+    }
     @Benchmark public int hashCodeGroovy(GroovyState state) {
         return state.m.hashCode() + state.m2.hashCode();
     }
