@@ -1,7 +1,6 @@
 package com.netflix.model;
 
 import com.netflix.model.ide.IntelliJModel;
-import com.netflix.model.java.JavaModel;
 import org.openjdk.jmh.annotations.Scope;
 import org.openjdk.jmh.annotations.Setup;
 import org.openjdk.jmh.annotations.State;

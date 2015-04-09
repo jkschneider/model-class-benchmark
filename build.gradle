@@ -14,6 +14,7 @@ plugins {
 apply plugin: 'groovy'
 apply plugin: 'scala'
 apply plugin: 'kotlin'
+apply plugin: 'idea'
 
 tasks.withType(GroovyCompile) {
     groovyOptions.optimizationOptions.indy = true
@@ -38,4 +39,10 @@ dependencies {
     compile 'org.scala-lang:scala-compiler:latest.release'
 
     compile 'org.jetbrains.kotlin:kotlin-stdlib:latest.release'
+}
+
+idea {
+    module {
+        scopes.PROVIDED.plus += [ configurations.jmh ]
+    }
 }
