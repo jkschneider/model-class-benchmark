@@ -4,6 +4,8 @@ This is a quick study of the relative performance of the typical DTO methods gen
 
 I'm impatient, so each benchmark is running with 20 warmups, 50 iterations, and 1 fork.  The benchmark is sampling for average time in nanoseconds.
 
+To run locally, _./gradlew jmh_ (it should take 10-15 minutes and the results will be in ./build/reports/jmh/human.txt)
+
 ## equals()
 
     Benchmark                         Mode  Cnt     Score    Error  Units
