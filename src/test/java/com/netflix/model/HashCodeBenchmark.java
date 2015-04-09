@@ -10,8 +10,13 @@ import java.util.concurrent.TimeUnit;
 @BenchmarkMode(Mode.AverageTime)
 @OutputTimeUnit(TimeUnit.NANOSECONDS)
 public class HashCodeBenchmark {
-    @Benchmark
-    public int hashCodeGroovy(GroovyState state) {
+    @Benchmark public int hashCodeIntelliJ(IntelliJState state) {
+        return state.m.hashCode() + state.m2.hashCode();
+    }
+    @Benchmark public int hashCodeEclipse(EclipseState state) {
+        return state.m.hashCode() + state.m2.hashCode();
+    }
+    @Benchmark public int hashCodeGroovy(GroovyState state) {
         return state.m.hashCode() + state.m2.hashCode();
     }
     @Benchmark public int hashCodeLombok(LombokState state) {
