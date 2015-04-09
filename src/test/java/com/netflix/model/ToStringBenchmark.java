@@ -10,9 +10,6 @@ import java.util.concurrent.TimeUnit;
 @BenchmarkMode(Mode.AverageTime)
 @OutputTimeUnit(TimeUnit.NANOSECONDS)
 public class ToStringBenchmark {
-    @Benchmark public String toStringJava(JavaState state) {
-        return state.m.toString();
-    }
     @Benchmark public String toStringIntelliJ(IntelliJState state) {
         return state.m.toString();
     }
