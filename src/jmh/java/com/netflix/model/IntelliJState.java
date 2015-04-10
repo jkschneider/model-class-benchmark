@@ -15,6 +15,6 @@ public class IntelliJState {
     @Setup
     public void prepare() {
         m =  new IntelliJModel(1.0, 1, Arrays.asList("1", "2", "3", "4", "5"), "1","2","3","4","5","6");
-        m2 = new IntelliJModel(1.5, 1, Arrays.asList("1","2","3","4","5"), "1","2","3","4","5","6");
+        m2 = new IntelliJModel(1.0, 1, Arrays.asList("1","2","3","4","5"), "1","2","3","4","5","6");
     }
 }

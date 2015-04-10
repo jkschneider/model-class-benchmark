@@ -18,6 +18,6 @@ public class ScalaState {
         m = ScalaModel.apply(1, JavaConverters.collectionAsScalaIterableConverter(Arrays.asList("1", "2", "3", "4", "5")).asScala(),
                 "1","2","3","4","5","6", 1.0);
         m2 = ScalaModel.apply(1, JavaConverters.collectionAsScalaIterableConverter(Arrays.asList("1", "2", "3", "4", "5")).asScala(),
-                "1","2","3","4","5","6", 1.5);
+                "1","2","3","4","5","6", 1.0);
     }
 }

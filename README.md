@@ -8,11 +8,13 @@ To run locally, _./gradlew jmh_ (it should take 10-15 minutes and the results wi
 
 ## equals()
 
-    Benchmark                         Mode  Cnt     Score    Error  Units
-    EqualsBenchmark.equalsGroovy      avgt   50    57.035 ±   2.883  ns/op
-    EqualsBenchmark.equalsKotlin      avgt   50    29.544 ±   1.269  ns/op
-    EqualsBenchmark.equalsLombok      avgt   50    30.019 ±   1.350  ns/op
-    EqualsBenchmark.equalsScala       avgt   50    51.966 ±   2.416  ns/op
+    Benchmark                                   Mode  Samples     Score    Error  Units
+    c.n.m.EqualsBenchmark.equalsEclipse         avgt       50    30.265 ±  1.203  ns/op
+    c.n.m.EqualsBenchmark.equalsGroovy          avgt       50    58.579 ±  2.496  ns/op
+    c.n.m.EqualsBenchmark.equalsIntelliJ        avgt       50    30.113 ±  1.259  ns/op
+    c.n.m.EqualsBenchmark.equalsKotlin          avgt       50    32.959 ±  1.356  ns/op
+    c.n.m.EqualsBenchmark.equalsLombok          avgt       50    30.056 ±  1.183  ns/op
+    c.n.m.EqualsBenchmark.equalsScala           avgt       50    57.706 ±  2.002  ns/op
 
 **Note:** @danielthomas went deep by decompiling and comparing the bytecodes of Kotlin and Lombok generated equals methods, and they are essentially identical.
 
@@ -20,16 +22,21 @@ To run locally, _./gradlew jmh_ (it should take 10-15 minutes and the results wi
 
 ## hashCode()
 
-    Benchmark                         Mode  Cnt     Score    Error  Units
-    HashCodeBenchmark.hashCodeGroovy  avgt   50  1337.638 ±  60.966  ns/op
-    HashCodeBenchmark.hashCodeKotlin  avgt   50    63.097 ±   3.222  ns/op
-    HashCodeBenchmark.hashCodeLombok  avgt   50    61.493 ±   2.885  ns/op
-    HashCodeBenchmark.hashCodeScala   avgt   50   139.673 ±   6.056  ns/op
+    Benchmark                                   Mode  Samples     Score    Error  Units
+    c.n.m.HashCodeBenchmark.hashCodeEclipse     avgt       50    60.223 ±  2.228  ns/op
+    c.n.m.HashCodeBenchmark.hashCodeGroovy      avgt       50  1263.242 ± 43.068  ns/op
+    c.n.m.HashCodeBenchmark.hashCodeIntelliJ    avgt       50    61.726 ±  2.769  ns/op
+    c.n.m.HashCodeBenchmark.hashCodeKotlin      avgt       50    62.117 ±  2.005  ns/op
+    c.n.m.HashCodeBenchmark.hashCodeLombok      avgt       50    59.100 ±  2.061  ns/op
+    c.n.m.HashCodeBenchmark.hashCodeScala       avgt       50   130.130 ±  3.023  ns/op
     
 ## toString()
 
-    Benchmark                         Mode  Cnt     Score     Error  Units
-    ToStringBenchmark.toStringGroovy  avgt   50  2990.375 ± 148.777  ns/op
-    ToStringBenchmark.toStringKotlin  avgt   50   463.005 ±  16.999  ns/op
-    ToStringBenchmark.toStringLombok  avgt   50   440.080 ±  18.320  ns/op
-    ToStringBenchmark.toStringScala   avgt   50   753.451 ±  31.255  ns/op
+    Benchmark                                   Mode  Samples     Score    Error  Units
+    c.n.m.HashCodeBenchmark.hashCodeScala       avgt       50   130.130 ±  3.023  ns/op
+    c.n.m.ToStringBenchmark.toStringEclipse     avgt       50   441.055 ± 19.371  ns/op
+    c.n.m.ToStringBenchmark.toStringGroovy      avgt       50  2692.622 ± 92.499  ns/op
+    c.n.m.ToStringBenchmark.toStringIntelliJ    avgt       50   460.399 ± 32.811  ns/op
+    c.n.m.ToStringBenchmark.toStringKotlin      avgt       50   412.480 ± 30.187  ns/op
+    c.n.m.ToStringBenchmark.toStringLombok      avgt       50   493.107 ± 43.294  ns/op
+    c.n.m.ToStringBenchmark.toStringScala       avgt       50   806.112 ± 78.413  ns/op

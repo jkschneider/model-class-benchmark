@@ -15,6 +15,6 @@ public class LombokState {
     @Setup
     public void prepare() {
         m =  new LombokModel(1, Arrays.asList("1", "2", "3", "4", "5"), "1","2","3","4","5","6", 1.0);
-        m2 = new LombokModel(1, Arrays.asList("1","2","3","4","5"), "1","2","3","4","5","6", 1.5);
+        m2 = new LombokModel(1, Arrays.asList("1","2","3","4","5"), "1","2","3","4","5","6", 1.0);
     }
 }
