@@ -33,7 +33,6 @@ To run locally, _./gradlew jmh_ (it should take 10-15 minutes and the results wi
 ## toString()
 
     Benchmark                                   Mode  Samples     Score    Error  Units
-    c.n.m.HashCodeBenchmark.hashCodeScala       avgt       50   130.130 ±  3.023  ns/op
     c.n.m.ToStringBenchmark.toStringEclipse     avgt       50   441.055 ± 19.371  ns/op
     c.n.m.ToStringBenchmark.toStringGroovy      avgt       50  2692.622 ± 92.499  ns/op
     c.n.m.ToStringBenchmark.toStringIntelliJ    avgt       50   460.399 ± 32.811  ns/op
