@@ -26,6 +26,7 @@ public class ModelBenchmark {
 
     public Object m;
     public Object m2;
+    public Object o = new Object();
 
     @Setup
     public void prepareModel() {
@@ -69,6 +70,11 @@ public class ModelBenchmark {
     @Benchmark
     public boolean equalsNull() {
         return m.equals(null);
+    }
+
+    @Benchmark
+    public boolean equalsOtherType() {
+        return m.equals(o);
     }
 
     @Benchmark
