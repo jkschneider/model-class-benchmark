@@ -4,38 +4,58 @@ This is a quick study of the relative performance of the typical DTO methods gen
 
 I'm impatient, so each benchmark is running with 20 warmups, 50 iterations, and 1 fork.  The benchmark is sampling for average time in nanoseconds.
 
-To run locally, _./gradlew jmh_ (it should take 10-15 minutes and the results will be in ./build/reports/jmh/human.txt)
+To run locally, _./gradlew jmh_ (it should take about 30 minutes and the results will be in ./build/reports/jmh/human.txt)
 
 ## equals()
 
-    Benchmark                                   Mode  Samples     Score    Error  Units
-    c.n.m.EqualsBenchmark.equalsEclipse         avgt       50    30.265 ±  1.203  ns/op
-    c.n.m.EqualsBenchmark.equalsGroovy          avgt       50    58.579 ±  2.496  ns/op
-    c.n.m.EqualsBenchmark.equalsIntelliJ        avgt       50    30.113 ±  1.259  ns/op
-    c.n.m.EqualsBenchmark.equalsKotlin          avgt       50    32.959 ±  1.356  ns/op
-    c.n.m.EqualsBenchmark.equalsLombok          avgt       50    30.056 ±  1.183  ns/op
-    c.n.m.EqualsBenchmark.equalsScala           avgt       50    57.706 ±  2.002  ns/op
+Equals against the same model instance:
 
-**Note:** @danielthomas went deep by decompiling and comparing the bytecodes of Kotlin and Lombok generated equals methods, and they are essentially identical.
+    Benchmark                        (model)  Mode  Cnt     Score    Error  Units
+    ModelBenchmark.equalsIdentity   intellij  avgt   50     3.657 ±  0.068  ns/op
+    ModelBenchmark.equalsIdentity    eclipse  avgt   50     2.200 ±  0.041  ns/op
+    ModelBenchmark.equalsIdentity     groovy  avgt   50     3.784 ±  0.078  ns/op
+    ModelBenchmark.equalsIdentity     lombok  avgt   50     3.668 ±  0.096  ns/op
+    ModelBenchmark.equalsIdentity      scala  avgt   50     2.207 ±  0.036  ns/op
+    ModelBenchmark.equalsIdentity     kotlin  avgt   50     2.248 ±  0.055  ns/op
 
-**Note 2:** Groovy 2.3.9 scored over 1000 ns/op on `equals()` with a similar error margin as below.
+Equals null:
+
+    Benchmark                        (model)  Mode  Cnt     Score    Error  Units
+    ModelBenchmark.equalsNull       intellij  avgt   50     3.651 ±  0.060  ns/op
+    ModelBenchmark.equalsNull        eclipse  avgt   50     2.295 ±  0.041  ns/op
+    ModelBenchmark.equalsNull         groovy  avgt   50     3.654 ±  0.068  ns/op
+    ModelBenchmark.equalsNull         lombok  avgt   50     3.952 ±  0.078  ns/op
+    ModelBenchmark.equalsNull          scala  avgt   50     3.855 ±  0.083  ns/op
+    ModelBenchmark.equalsNull         kotlin  avgt   50     2.147 ±  0.043  ns/op
+
+Equals against an equal, but different instance:
+
+    Benchmark                        (model)  Mode  Cnt     Score    Error  Units
+    ModelBenchmark.equalsWorstCase  intellij  avgt   50    37.674 ±  0.716  ns/op
+    ModelBenchmark.equalsWorstCase   eclipse  avgt   50    37.748 ±  0.500  ns/op
+    ModelBenchmark.equalsWorstCase    groovy  avgt   50    54.944 ±  0.807  ns/op
+    ModelBenchmark.equalsWorstCase    lombok  avgt   50    36.983 ±  0.526  ns/op
+    ModelBenchmark.equalsWorstCase     scala  avgt   50    38.614 ±  0.598  ns/op
+    ModelBenchmark.equalsWorstCase    kotlin  avgt   50    58.159 ±  0.702  ns/op
+
+**Note:** Groovy 2.3.9 scored over 1000 ns/op on `equals()` with a similar error margin as below.
 
 ## hashCode()
 
-    Benchmark                                   Mode  Samples     Score    Error  Units
-    c.n.m.HashCodeBenchmark.hashCodeEclipse     avgt       50    60.223 ±  2.228  ns/op
-    c.n.m.HashCodeBenchmark.hashCodeGroovy      avgt       50  1263.242 ± 43.068  ns/op
-    c.n.m.HashCodeBenchmark.hashCodeIntelliJ    avgt       50    61.726 ±  2.769  ns/op
-    c.n.m.HashCodeBenchmark.hashCodeKotlin      avgt       50    62.117 ±  2.005  ns/op
-    c.n.m.HashCodeBenchmark.hashCodeLombok      avgt       50    59.100 ±  2.061  ns/op
-    c.n.m.HashCodeBenchmark.hashCodeScala       avgt       50   130.130 ±  3.023  ns/op
-    
+    Benchmark                        (model)  Mode  Cnt     Score    Error  Units
+    ModelBenchmark.hashCode         intellij  avgt   50    35.226 ±  0.534  ns/op
+    ModelBenchmark.hashCode          eclipse  avgt   50    35.788 ±  0.759  ns/op
+    ModelBenchmark.hashCode           groovy  avgt   50   487.292 ±  8.966  ns/op
+    ModelBenchmark.hashCode           lombok  avgt   50    42.833 ±  0.590  ns/op
+    ModelBenchmark.hashCode            scala  avgt   50    60.446 ±  0.921  ns/op
+    ModelBenchmark.hashCode           kotlin  avgt   50    45.339 ±  0.809  ns/op
+
 ## toString()
 
-    Benchmark                                   Mode  Samples     Score    Error  Units
-    c.n.m.ToStringBenchmark.toStringEclipse     avgt       50   441.055 ± 19.371  ns/op
-    c.n.m.ToStringBenchmark.toStringGroovy      avgt       50  2692.622 ± 92.499  ns/op
-    c.n.m.ToStringBenchmark.toStringIntelliJ    avgt       50   460.399 ± 32.811  ns/op
-    c.n.m.ToStringBenchmark.toStringKotlin      avgt       50   412.480 ± 30.187  ns/op
-    c.n.m.ToStringBenchmark.toStringLombok      avgt       50   493.107 ± 43.294  ns/op
-    c.n.m.ToStringBenchmark.toStringScala       avgt       50   806.112 ± 78.413  ns/op
+    Benchmark                        (model)  Mode  Cnt     Score    Error  Units
+    ModelBenchmark.toString         intellij  avgt   50   390.184 ± 10.019  ns/op
+    ModelBenchmark.toString          eclipse  avgt   50   375.839 ±  5.093  ns/op
+    ModelBenchmark.toString           groovy  avgt   50  2064.575 ± 28.146  ns/op
+    ModelBenchmark.toString           lombok  avgt   50   378.878 ±  7.978  ns/op
+    ModelBenchmark.toString            scala  avgt   50   816.481 ± 38.111  ns/op
+    ModelBenchmark.toString           kotlin  avgt   50   352.479 ±  9.896  ns/op

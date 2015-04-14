@@ -90,8 +90,8 @@ public class ModelBenchmark {
     public static void main(String[] args) throws RunnerException {
         Options opt = new OptionsBuilder()
                 .include(ModelBenchmark.class.getSimpleName())
-                .warmupIterations(5)
-                .measurementIterations(10)
+                .warmupIterations(15)
+                .measurementIterations(30)
                 .forks(1)
                 .build();
         new Runner(opt).run();

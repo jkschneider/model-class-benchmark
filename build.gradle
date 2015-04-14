@@ -26,8 +26,8 @@ repositories {
 
 jmh {
     jmhVersion = '1.8'
-    warmupIterations = 20
-    iterations = 50
+    warmupIterations = 15
+    iterations = 30
     fork = 1
 }
 
