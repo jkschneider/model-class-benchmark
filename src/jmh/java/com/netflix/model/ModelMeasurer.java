@@ -16,11 +16,11 @@ public class ModelMeasurer {
             Predicate<Object> predicate = new Predicate<Object>() {
                 @Override
                 public boolean apply(Object input) {
-                    return !input.getClass().getCanonicalName().equals("groovy.lang.MetaClassImpl");
+                    return input == null || !input.getClass().getCanonicalName().equals("groovy.lang.MetaClassImpl");
                 }
             };
-            ObjectGraphMeasurer.Footprint footprint = ObjectGraphMeasurer.measure(model, predicate);
             long bytes = MemoryMeasurer.measureBytes(m, predicate);
+            ObjectGraphMeasurer.Footprint footprint = ObjectGraphMeasurer.measure(m, predicate);
             System.out.println(model + " : " + bytes + " bytes, " + footprint);
         }
     }

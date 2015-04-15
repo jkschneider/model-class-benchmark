@@ -131,13 +131,13 @@ Equals against an equal, but different instance:
 
 # Memory
 
-    intellij : 440 bytes, Footprint{Objects=2, References=1, Primitives=[char x 8, int x 2]}
-    eclipse : 440 bytes, Footprint{Objects=2, References=1, Primitives=[char x 7, int x 2]}
-    groovy : 448 bytes, Footprint{Objects=2, References=1, Primitives=[char x 6, int x 2]}
-    staticgroovy : 448 bytes, Footprint{Objects=2, References=1, Primitives=[char x 12, int x 2]}
-    lombok : 440 bytes, Footprint{Objects=2, References=1, Primitives=[char x 6, int x 2]}
-    scala : 520 bytes, Footprint{Objects=2, References=1, Primitives=[char x 5, int x 2]}
-    kotlin : 408 bytes, Footprint{Objects=2, References=1, Primitives=[char x 6, int x 2]}
-    autovalue : 440 bytes, Footprint{Objects=2, References=1, Primitives=[char x 9, int x 2]}
+    intellij : 440 bytes, Footprint{Objects=17, References=21, Primitives=[int x 14, char x 6, double]}
+    eclipse : 440 bytes, Footprint{Objects=17, References=21, Primitives=[int x 14, char x 6, double]}
+    groovy : 448 bytes, Footprint{Objects=17, References=22, Primitives=[int x 14, char x 6, double]}
+    staticgroovy : 448 bytes, Footprint{Objects=17, References=22, Primitives=[int x 14, char x 6, double]}
+    lombok : 440 bytes, Footprint{Objects=17, References=21, Primitives=[int x 14, char x 6, double]}
+    scala : 520 bytes, Footprint{Objects=17, References=39, Primitives=[int x 14, char x 6, double]}
+    kotlin : 408 bytes, Footprint{Objects=15, References=19, Primitives=[int x 14, char x 6, double]}
+    autovalue : 440 bytes, Footprint{Objects=17, References=21, Primitives=[int x 14, char x 6, double]}
 
 Note: `metaClass` reference is excluded for Groovy.
