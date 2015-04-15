@@ -1,4 +1,4 @@
-package com.netflix.model.lombok;
+package com.netflix.model.generated;
 
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;

@@ -1,5 +1,6 @@
 package com.netflix.model.groovy
 
+import groovy.transform.CompileStatic
 import groovy.transform.EqualsAndHashCode
 import groovy.transform.ToString
 import groovy.transform.TupleConstructor
@@ -7,7 +8,8 @@ import groovy.transform.TupleConstructor
 @TupleConstructor
 @EqualsAndHashCode
 @ToString
-class GroovyModel {
+@CompileStatic
+class StaticGroovyModel {
     Integer integer
     List<String> list
     String str1
