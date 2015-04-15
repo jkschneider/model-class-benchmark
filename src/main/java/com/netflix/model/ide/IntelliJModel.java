@@ -16,8 +16,7 @@ public class IntelliJModel {
     String str6;
     Double doub;
 
-    public IntelliJModel(Double doub, Integer integer, List<String> list, String str1, String str2, String str3, String str4, String str5, String str6) {
-        this.doub = doub;
+    public IntelliJModel(Integer integer, List<String> list, String str1, String str2, String str3, String str4, String str5, String str6, Double doub) {
         this.integer = integer;
         this.list = list;
         this.str1 = str1;
@@ -26,6 +25,7 @@ public class IntelliJModel {
         this.str4 = str4;
         this.str5 = str5;
         this.str6 = str6;
+        this.doub = doub;
     }
 
     public Double getDoub() {
