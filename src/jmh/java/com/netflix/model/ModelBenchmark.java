@@ -1,10 +1,12 @@
 package com.netflix.model;
 
+import com.netflix.model.generated.AutoValueModel;
+import com.netflix.model.generated.LombokModel;
 import com.netflix.model.groovy.GroovyModel;
+import com.netflix.model.groovy.StaticGroovyModel;
 import com.netflix.model.ide.EclipseModel;
 import com.netflix.model.ide.IntelliJModel;
 import com.netflix.model.kotlin.KotlinModel;
-import com.netflix.model.lombok.LombokModel;
 import com.netflix.model.scala.ScalaModel;
 import org.openjdk.jmh.annotations.*;
 import org.openjdk.jmh.runner.Runner;
@@ -21,7 +23,7 @@ import java.util.concurrent.TimeUnit;
 @OutputTimeUnit(TimeUnit.NANOSECONDS)
 @State(Scope.Benchmark)
 public class ModelBenchmark {
-    @Param({"intellij", "eclipse", "groovy", "lombok", "scala", "kotlin"})
+    @Param({"intellij", "eclipse", "groovy", "staticgroovy", "lombok", "scala", "kotlin", "autovalue"})
     public String model;
 
     public Object m;
@@ -43,6 +45,8 @@ public class ModelBenchmark {
                 return new EclipseModel(1, list, "1", "2", "3", "4", "5", "6", 1.0);
             case "groovy":
                 return new GroovyModel(1, list, "1", "2", "3", "4", "5", "6", 1.0);
+            case "staticgroovy":
+                return new StaticGroovyModel(1, list, "1", "2", "3", "4", "5", "6", 1.0);
             case "lombok":
                 return new LombokModel(1, list, "1", "2", "3", "4", "5", "6", 1.0);
             case "scala":
@@ -50,6 +54,8 @@ public class ModelBenchmark {
                         "1", "2", "3", "4", "5", "6", 1.0);
             case "kotlin":
                 return new KotlinModel(1, list, "1", "2", "3", "4", "5", "6", 1.0);
+            case "autovalue":
+                return AutoValueModel.create(1, list, "1", "2", "3", "4", "5", "6", 1.0);
             default:
                 throw new IllegalArgumentException("Unknown model " + model);
         }
