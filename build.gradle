@@ -8,7 +8,7 @@ buildscript {
 }
 
 plugins {
-   id 'me.champeau.gradle.jmh' version '0.2.0'
+    id 'me.champeau.gradle.jmh' version '0.2.0'
 }
 
 apply plugin: 'groovy'
@@ -42,10 +42,18 @@ dependencies {
     compile 'org.scala-lang:scala-compiler:2.11.6'
 
     compile 'org.jetbrains.kotlin:kotlin-stdlib:0.11.91.1'
+    
+    compile fileTree(dir: 'lib', include: '*.jar')
 }
 
 idea {
     module {
-        scopes.PROVIDED.plus += [ configurations.jmh ]
+        scopes.PROVIDED.plus += [configurations.jmh]
     }
+}
+
+task measureMemory(type: JavaExec) {
+    main = 'com.netflix.model.ModelMeasurer'
+    classpath = sourceSets.jmh.runtimeClasspath
+    jvmArgs = ["-javaagent:${file('lib/object-explorer.jar')}"]
 }
