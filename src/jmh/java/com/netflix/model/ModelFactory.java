@@ -6,6 +6,7 @@ import com.netflix.model.groovy.GroovyModel;
 import com.netflix.model.groovy.StaticGroovyModel;
 import com.netflix.model.ide.EclipseModel;
 import com.netflix.model.ide.IntelliJModel;
+import com.netflix.model.kotlin.KotlinLazyModel;
 import com.netflix.model.kotlin.KotlinModel;
 import com.netflix.model.scala.ScalaModel;
 import scala.collection.JavaConverters;
@@ -27,7 +28,7 @@ public final class ModelFactory {
                 return new EclipseModel(integer, list, "1", "2", "3", "4", "5", "6", 1.0);
             case "groovy":
                 return new GroovyModel(integer, list, "1", "2", "3", "4", "5", "6", 1.0);
-            case "staticgroovy":
+            case "groovystatic":
                 return new StaticGroovyModel(integer, list, "1", "2", "3", "4", "5", "6", 1.0);
             case "lombok":
                 return new LombokModel(integer, list, "1", "2", "3", "4", "5", "6", 1.0);
@@ -36,6 +37,8 @@ public final class ModelFactory {
                         "1", "2", "3", "4", "5", "6", 1.0);
             case "kotlin":
                 return new KotlinModel(integer, list, "1", "2", "3", "4", "5", "6", 1.0);
+            case "kotlinlazy":
+                return new KotlinLazyModel(integer, list, "1", "2", "3", "4", "5", "6", 1.0);
             case "autovalue":
                 return AutoValueModel.create(integer, list, "1", "2", "3", "4", "5", "6", 1.0);
             default:
