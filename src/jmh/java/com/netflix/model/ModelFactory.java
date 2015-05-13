@@ -4,6 +4,7 @@ import com.netflix.model.generated.AutoValueModel;
 import com.netflix.model.generated.LombokModel;
 import com.netflix.model.groovy.GroovyModel;
 import com.netflix.model.groovy.StaticGroovyModel;
+import com.netflix.model.guava.GuavaModel;
 import com.netflix.model.ide.EclipseModel;
 import com.netflix.model.ide.IntelliJModel;
 import com.netflix.model.kotlin.KotlinLazyModel;
@@ -41,6 +42,8 @@ public final class ModelFactory {
                 return new KotlinLazyModel(integer, list, "1", "2", "3", "4", "5", "6", 1.0);
             case "autovalue":
                 return AutoValueModel.create(integer, list, "1", "2", "3", "4", "5", "6", 1.0);
+            case "guava":
+                return new GuavaModel(integer, list, "1", "2", "3", "4", "5", "6", 1.0);
             default:
                 throw new IllegalArgumentException("Unknown model " + model);
         }
