@@ -38,6 +38,8 @@ dependencies {
 
     compile 'com.google.auto.value:auto-value:1.0'
 
+    compile 'com.google.guava:guava:18.0'
+
     compile 'org.scala-lang:scala-library:2.11.6'
     compile 'org.scala-lang:scala-compiler:2.11.6'
 

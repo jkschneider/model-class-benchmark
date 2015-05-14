@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 @OutputTimeUnit(TimeUnit.NANOSECONDS)
 @State(Scope.Benchmark)
 public class ModelBenchmark {
-    @Param({"intellij", "eclipse", "groovy", "groovystatic", "lombok", "scala", "kotlin", "kotlinlazy", "autovalue"})
+    @Param({"intellij", "eclipse", "groovy", "groovystatic", "lombok", "scala", "kotlin", "kotlinlazy", "autovalue", "guava"})
     public String model;
 
     public Object m;
