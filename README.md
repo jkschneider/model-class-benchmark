@@ -45,120 +45,129 @@ To run locally:
 ## Object instantiation
 
     Benchmark                            (model)  Mode  Cnt     Score    Error  Units
-    ModelBenchmark.create               intellij  avgt   30    22.121 ±  0.397  ns/op
-    ModelBenchmark.create                eclipse  avgt   30    23.303 ±  0.427  ns/op
-    ModelBenchmark.create                 groovy  avgt   30    27.144 ±  0.555  ns/op
-    ModelBenchmark.create           groovystatic  avgt   30    26.857 ±  0.601  ns/op
-    ModelBenchmark.create                 lombok  avgt   30    22.467 ±  0.623  ns/op
-    ModelBenchmark.create                  scala  avgt   30    25.356 ±  0.321  ns/op
-    ModelBenchmark.create                 kotlin  avgt   30    21.550 ±  0.442  ns/op
-    ModelBenchmark.create             kotlinlazy  avgt   30    26.286 ±  0.482  ns/op
-    ModelBenchmark.create              autovalue  avgt   30    23.305 ±  0.292  ns/op
+    ModelBenchmark.create               intellij  avgt   30    22.157 ±  0.217  ns/op
+    ModelBenchmark.create                eclipse  avgt   30    23.090 ±  0.173  ns/op
+    ModelBenchmark.create                 groovy  avgt   30    29.400 ±  0.203  ns/op
+    ModelBenchmark.create           groovystatic  avgt   30    26.915 ±  0.194  ns/op
+    ModelBenchmark.create                 lombok  avgt   30    22.047 ±  0.212  ns/op
+    ModelBenchmark.create                  scala  avgt   30    25.742 ±  0.287  ns/op
+    ModelBenchmark.create                 kotlin  avgt   30    21.753 ±  0.309  ns/op
+    ModelBenchmark.create             kotlinlazy  avgt   30    26.180 ±  0.248  ns/op
+    ModelBenchmark.create              autovalue  avgt   30    23.076 ±  0.191  ns/op
+    ModelBenchmark.create                  guava  avgt   30    22.856 ±  0.168  ns/op
 
 ## equals()
 
 Equals against the same model instance:
 
     Benchmark                            (model)  Mode  Cnt     Score    Error  Units
-    ModelBenchmark.equalsIdentity       intellij  avgt   30     3.569 ±  0.081  ns/op
-    ModelBenchmark.equalsIdentity        eclipse  avgt   30     2.148 ±  0.045  ns/op
-    ModelBenchmark.equalsIdentity         groovy  avgt   30     5.890 ±  0.133  ns/op
-    ModelBenchmark.equalsIdentity   groovystatic  avgt   30     3.563 ±  0.085  ns/op
-    ModelBenchmark.equalsIdentity         lombok  avgt   30     3.558 ±  0.095  ns/op
-    ModelBenchmark.equalsIdentity          scala  avgt   30     2.172 ±  0.050  ns/op
-    ModelBenchmark.equalsIdentity         kotlin  avgt   30     2.160 ±  0.059  ns/op
-    ModelBenchmark.equalsIdentity     kotlinlazy  avgt   30     2.139 ±  0.043  ns/op
-    ModelBenchmark.equalsIdentity      autovalue  avgt   30     2.154 ±  0.053  ns/op
+    ModelBenchmark.equalsIdentity       intellij  avgt   30     4.024 ±  0.028  ns/op
+    ModelBenchmark.equalsIdentity        eclipse  avgt   30     2.663 ±  0.020  ns/op
+    ModelBenchmark.equalsIdentity         groovy  avgt   30     6.622 ±  0.040  ns/op
+    ModelBenchmark.equalsIdentity   groovystatic  avgt   30     4.016 ±  0.040  ns/op
+    ModelBenchmark.equalsIdentity         lombok  avgt   30     4.018 ±  0.033  ns/op
+    ModelBenchmark.equalsIdentity          scala  avgt   30     2.597 ±  0.022  ns/op
+    ModelBenchmark.equalsIdentity         kotlin  avgt   30     2.615 ±  0.037  ns/op
+    ModelBenchmark.equalsIdentity     kotlinlazy  avgt   30     2.602 ±  0.023  ns/op
+    ModelBenchmark.equalsIdentity      autovalue  avgt   30     2.640 ±  0.019  ns/op
+    ModelBenchmark.equalsIdentity          guava  avgt   30     2.611 ±  0.029  ns/op
 
 Equals null:
 
     Benchmark                            (model)  Mode  Cnt     Score    Error  Units
-    ModelBenchmark.equalsNull           intellij  avgt   30     3.495 ±  0.082  ns/op
-    ModelBenchmark.equalsNull            eclipse  avgt   30     2.151 ±  0.051  ns/op
-    ModelBenchmark.equalsNull             groovy  avgt   30     3.299 ±  0.083  ns/op
-    ModelBenchmark.equalsNull       groovystatic  avgt   30     3.315 ±  0.087  ns/op
-    ModelBenchmark.equalsNull             lombok  avgt   30     3.484 ±  0.087  ns/op
-    ModelBenchmark.equalsNull              scala  avgt   30     2.208 ±  0.117  ns/op
-    ModelBenchmark.equalsNull             kotlin  avgt   30     2.218 ±  0.059  ns/op
-    ModelBenchmark.equalsNull         kotlinlazy  avgt   30     2.250 ±  0.088  ns/op
-    ModelBenchmark.equalsNull          autovalue  avgt   30     2.161 ±  0.053  ns/op
+    ModelBenchmark.equalsNull           intellij  avgt   30     4.076 ±  0.038  ns/op
+    ModelBenchmark.equalsNull            eclipse  avgt   30     2.632 ±  0.029  ns/op
+    ModelBenchmark.equalsNull             groovy  avgt   30     3.942 ±  0.045  ns/op
+    ModelBenchmark.equalsNull       groovystatic  avgt   30     3.913 ±  0.041  ns/op
+    ModelBenchmark.equalsNull             lombok  avgt   30     4.351 ±  0.045  ns/op
+    ModelBenchmark.equalsNull              scala  avgt   30     2.631 ±  0.022  ns/op
+    ModelBenchmark.equalsNull             kotlin  avgt   30     2.629 ±  0.028  ns/op
+    ModelBenchmark.equalsNull         kotlinlazy  avgt   30     2.627 ±  0.030  ns/op
+    ModelBenchmark.equalsNull          autovalue  avgt   30     2.666 ±  0.025  ns/op
+    ModelBenchmark.equalsNull              guava  avgt   30     2.643 ±  0.023  ns/op
+
 
 Equals against an instance with a different type:
 
     Benchmark                            (model)  Mode  Cnt     Score    Error  Units
-    ModelBenchmark.equalsOtherType      intellij  avgt   30     3.916 ±  0.138  ns/op
-    ModelBenchmark.equalsOtherType       eclipse  avgt   30     2.980 ±  0.099  ns/op
-    ModelBenchmark.equalsOtherType        groovy  avgt   30     5.914 ±  0.155  ns/op
-    ModelBenchmark.equalsOtherType  groovystatic  avgt   30     3.845 ±  0.120  ns/op
-    ModelBenchmark.equalsOtherType        lombok  avgt   30     4.177 ±  0.175  ns/op
-    ModelBenchmark.equalsOtherType         scala  avgt   30     2.981 ±  0.073  ns/op
-    ModelBenchmark.equalsOtherType        kotlin  avgt   30     3.035 ±  0.092  ns/op
-    ModelBenchmark.equalsOtherType    kotlinlazy  avgt   30     3.036 ±  0.082  ns/op
-    ModelBenchmark.equalsOtherType     autovalue  avgt   30     3.102 ±  0.076  ns/op
+    ModelBenchmark.equalsOtherType      intellij  avgt   30     4.472 ±  0.036  ns/op
+    ModelBenchmark.equalsOtherType       eclipse  avgt   30     3.272 ±  0.041  ns/op
+    ModelBenchmark.equalsOtherType        groovy  avgt   30     6.705 ±  0.087  ns/op
+    ModelBenchmark.equalsOtherType  groovystatic  avgt   30     4.910 ±  0.038  ns/op
+    ModelBenchmark.equalsOtherType        lombok  avgt   30     5.905 ±  0.304  ns/op
+    ModelBenchmark.equalsOtherType         scala  avgt   30     3.398 ±  0.031  ns/op
+    ModelBenchmark.equalsOtherType        kotlin  avgt   30     3.386 ±  0.034  ns/op
+    ModelBenchmark.equalsOtherType    kotlinlazy  avgt   30     3.394 ±  0.037  ns/op
+    ModelBenchmark.equalsOtherType     autovalue  avgt   30     3.610 ±  0.025  ns/op
+    ModelBenchmark.equalsOtherType         guava  avgt   30     3.271 ±  0.048  ns/op
 
 Equals against an equal, but different instance:
 
     Benchmark                            (model)  Mode  Cnt     Score    Error  Units
-    ModelBenchmark.equalsWorstCase      intellij  avgt   30    23.202 ±  1.264  ns/op
-    ModelBenchmark.equalsWorstCase       eclipse  avgt   30    22.514 ±  0.803  ns/op
-    ModelBenchmark.equalsWorstCase        groovy  avgt   30   249.709 ± 11.433  ns/op
-    ModelBenchmark.equalsWorstCase  groovystatic  avgt   30    41.760 ±  1.376  ns/op
-    ModelBenchmark.equalsWorstCase        lombok  avgt   30    20.928 ±  0.399  ns/op
-    ModelBenchmark.equalsWorstCase         scala  avgt   30    22.214 ±  0.559  ns/op
-    ModelBenchmark.equalsWorstCase        kotlin  avgt   30    58.841 ±  0.743  ns/op
-    ModelBenchmark.equalsWorstCase    kotlinlazy  avgt   30    58.704 ±  0.489  ns/op
-    ModelBenchmark.equalsWorstCase     autovalue  avgt   30    19.462 ±  0.468  ns/op
+    ModelBenchmark.equalsWorstCase      intellij  avgt   30    28.162 ±  0.289  ns/op
+    ModelBenchmark.equalsWorstCase       eclipse  avgt   30    28.493 ±  0.256  ns/op
+    ModelBenchmark.equalsWorstCase        groovy  avgt   30   284.807 ±  3.706  ns/op
+    ModelBenchmark.equalsWorstCase  groovystatic  avgt   30    46.680 ±  0.472  ns/op
+    ModelBenchmark.equalsWorstCase        lombok  avgt   30    27.754 ±  0.257  ns/op
+    ModelBenchmark.equalsWorstCase         scala  avgt   30    27.396 ±  0.330  ns/op
+    ModelBenchmark.equalsWorstCase        kotlin  avgt   30    73.141 ±  0.651  ns/op
+    ModelBenchmark.equalsWorstCase    kotlinlazy  avgt   30    29.659 ±  0.325  ns/op
+    ModelBenchmark.equalsWorstCase     autovalue  avgt   30    26.905 ±  0.319  ns/op
+    ModelBenchmark.equalsWorstCase         guava  avgt   30    28.181 ±  0.297  ns/op
 
 ## firstHashCode()
 
 Allows comparison of expense of lazy initialisation of hashCode for lazy classes. Includes object creation overhead.
 
-    ModelBenchmark.firstHashCode        intellij  avgt   30    44.756 ±  1.959  ns/op
-    ModelBenchmark.firstHashCode         eclipse  avgt   30    43.533 ±  1.287  ns/op
-    ModelBenchmark.firstHashCode          groovy  avgt   30   623.491 ± 36.298  ns/op
-    ModelBenchmark.firstHashCode    groovystatic  avgt   30   513.923 ±  9.589  ns/op
-    ModelBenchmark.firstHashCode          lombok  avgt   30    56.687 ± 13.843  ns/op
-    ModelBenchmark.firstHashCode           scala  avgt   30    65.914 ±  1.697  ns/op
-    ModelBenchmark.firstHashCode          kotlin  avgt   30    36.238 ±  0.360  ns/op
-    ModelBenchmark.firstHashCode      kotlinlazy  avgt   30    79.406 ±  0.813  ns/op
-    ModelBenchmark.firstHashCode       autovalue  avgt   30    41.890 ±  0.396  ns/op
+    ModelBenchmark.firstHashCode        intellij  avgt   30    44.858 ±  0.276  ns/op
+    ModelBenchmark.firstHashCode         eclipse  avgt   30    45.929 ±  0.395  ns/op
+    ModelBenchmark.firstHashCode          groovy  avgt   30   824.708 ± 12.540  ns/op
+    ModelBenchmark.firstHashCode    groovystatic  avgt   30   726.060 ±  5.983  ns/op
+    ModelBenchmark.firstHashCode          lombok  avgt   30    45.172 ±  0.581  ns/op
+    ModelBenchmark.firstHashCode           scala  avgt   30    68.644 ±  0.498  ns/op
+    ModelBenchmark.firstHashCode          kotlin  avgt   30    41.501 ±  0.427  ns/op
+    ModelBenchmark.firstHashCode      kotlinlazy  avgt   30   125.924 ±  1.734  ns/op
+    ModelBenchmark.firstHashCode       autovalue  avgt   30    42.409 ±  0.580  ns/op
+    ModelBenchmark.firstHashCode           guava  avgt   30   108.756 ±  1.352  ns/op
 
 ## hashCode()
 
     Benchmark                            (model)  Mode  Cnt     Score    Error  Units
-    ModelBenchmark.hashCode             intellij  avgt   30    23.133 ±  0.335  ns/op
-    ModelBenchmark.hashCode              eclipse  avgt   30    23.791 ±  0.286  ns/op
-    ModelBenchmark.hashCode               groovy  avgt   30   639.306 ± 13.553  ns/op
-    ModelBenchmark.hashCode         groovystatic  avgt   30   469.970 ±  8.272  ns/op
-    ModelBenchmark.hashCode               lombok  avgt   30    23.534 ±  0.504  ns/op
-    ModelBenchmark.hashCode                scala  avgt   30    41.487 ±  0.956  ns/op
-    ModelBenchmark.hashCode               kotlin  avgt   30    24.742 ±  0.795  ns/op
-    ModelBenchmark.hashCode           kotlinlazy  avgt   30     3.702 ±  0.051  ns/op
-    ModelBenchmark.hashCode            autovalue  avgt   30    22.353 ±  0.291  ns/op
+    ModelBenchmark.hashCode             intellij  avgt   30    25.924 ±  0.200  ns/op
+    ModelBenchmark.hashCode              eclipse  avgt   30    27.128 ±  0.225  ns/op
+    ModelBenchmark.hashCode               groovy  avgt   30   790.066 ±  7.902  ns/op
+    ModelBenchmark.hashCode         groovystatic  avgt   30   705.565 ±  7.212  ns/op
+    ModelBenchmark.hashCode               lombok  avgt   30    27.113 ±  0.300  ns/op
+    ModelBenchmark.hashCode                scala  avgt   30    45.070 ±  0.705  ns/op
+    ModelBenchmark.hashCode               kotlin  avgt   30    27.024 ±  0.255  ns/op
+    ModelBenchmark.hashCode           kotlinlazy  avgt   30     4.101 ±  0.039  ns/op
+    ModelBenchmark.hashCode            autovalue  avgt   30    25.372 ±  0.210  ns/op
+    ModelBenchmark.hashCode                guava  avgt   30    92.790 ±  1.038  ns/op
 
 ## toString()
 
     Benchmark                            (model)  Mode  Cnt     Score    Error  Units
-    ModelBenchmark.toString             intellij  avgt   30   326.368 ±  3.730  ns/op
-    ModelBenchmark.toString              eclipse  avgt   30   314.536 ±  3.206  ns/op
-    ModelBenchmark.toString               groovy  avgt   30  2199.181 ± 26.827  ns/op
-    ModelBenchmark.toString         groovystatic  avgt   30  1987.615 ± 24.733  ns/op
-    ModelBenchmark.toString               lombok  avgt   30   316.160 ±  4.252  ns/op
-    ModelBenchmark.toString                scala  avgt   30   569.748 ±  6.689  ns/op
-    ModelBenchmark.toString               kotlin  avgt   30   341.282 ±  4.322  ns/op
-    ModelBenchmark.toString           kotlinlazy  avgt   30   291.707 ±  5.106  ns/op
-    ModelBenchmark.toString            autovalue  avgt   30   366.413 ± 12.884  ns/op
-
+    ModelBenchmark.toString             intellij  avgt   30   360.352 ±  3.316  ns/op
+    ModelBenchmark.toString              eclipse  avgt   30   344.785 ±  2.575  ns/op
+    ModelBenchmark.toString               groovy  avgt   30  2459.703 ± 29.160  ns/op
+    ModelBenchmark.toString         groovystatic  avgt   30  2256.511 ± 20.937  ns/op
+    ModelBenchmark.toString               lombok  avgt   30   346.593 ±  2.323  ns/op
+    ModelBenchmark.toString                scala  avgt   30   666.399 ±  5.046  ns/op
+    ModelBenchmark.toString               kotlin  avgt   30   337.323 ±  2.805  ns/op
+    ModelBenchmark.toString           kotlinlazy  avgt   30   335.975 ±  2.669  ns/op
+    ModelBenchmark.toString            autovalue  avgt   30   406.148 ±  3.602  ns/op
+    ModelBenchmark.toString                guava  avgt   30   513.389 ±  5.612  ns/op
 
 # Memory
 
-    intellij : 440 bytes, Footprint{Objects=17, References=21, Primitives=[int x 14, char x 6, double]}
-    eclipse : 440 bytes, Footprint{Objects=17, References=21, Primitives=[int x 14, char x 6, double]}
-    groovy : 448 bytes, Footprint{Objects=17, References=22, Primitives=[int x 14, char x 6, double]}
-    staticgroovy : 448 bytes, Footprint{Objects=17, References=22, Primitives=[int x 14, char x 6, double]}
-    lombok : 440 bytes, Footprint{Objects=17, References=21, Primitives=[int x 14, char x 6, double]}
-    scala : 520 bytes, Footprint{Objects=17, References=39, Primitives=[int x 14, char x 6, double]}
-    kotlin : 408 bytes, Footprint{Objects=15, References=19, Primitives=[int x 14, char x 6, double]}
-    autovalue : 440 bytes, Footprint{Objects=17, References=21, Primitives=[int x 14, char x 6, double]}
+    intellij : 440 bytes, Footprint{Objects=17, References=21, Primitives=[double, int x 8, char x 6]}
+    eclipse : 440 bytes, Footprint{Objects=17, References=21, Primitives=[double, int x 8, char x 6]}
+    groovy : 448 bytes, Footprint{Objects=17, References=22, Primitives=[double, int x 8, char x 6]}
+    groovystatic : 448 bytes, Footprint{Objects=17, References=22, Primitives=[double, int x 8, char x 6]}
+    lombok : 440 bytes, Footprint{Objects=17, References=21, Primitives=[double, int x 8, char x 6]}
+    scala : 520 bytes, Footprint{Objects=17, References=39, Primitives=[double, int x 8, char x 6]}
+    kotlin : 408 bytes, Footprint{Objects=15, References=19, Primitives=[double, int x 8, char x 6]}
+    autovalue : 440 bytes, Footprint{Objects=17, References=21, Primitives=[double, int x 8, char x 6]}
+    guava : 440 bytes, Footprint{Objects=17, References=21, Primitives=[double, int x 8, char x 6]}
 
 Note: `metaClass` reference is excluded for Groovy.

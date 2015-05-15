@@ -10,7 +10,7 @@ import java.util.List;
 
 public class ModelMeasurer {
     public static void main(String[] args) {
-        List<String> models = Arrays.asList("intellij", "eclipse", "groovy", "staticgroovy", "lombok", "scala", "kotlin", "autovalue", "guava");
+        List<String> models = Arrays.asList("intellij", "eclipse", "groovy", "groovystatic", "lombok", "scala", "kotlin", "autovalue", "guava");
         for (String model : models) {
             Object m = ModelFactory.create(model);
             Predicate<Object> predicate = new Predicate<Object>() {
