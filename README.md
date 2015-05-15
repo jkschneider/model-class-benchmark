@@ -7,6 +7,7 @@ This is a quick study of the relative performance and size of the typical DTO me
 * Kotlin 0.11.91.1 data classes
 * Lombok and AutoValue annotation generated
 * Eclipse and IntelliJ auto-generated
+* Guava recommendations
 
 ## Notes
 
