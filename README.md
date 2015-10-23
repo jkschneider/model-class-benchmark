@@ -13,7 +13,6 @@ This is a quick study of the relative performance and size of the typical DTO me
 
 * Caching `hashCode()` values for immutable classes is an important optimisation, that can't be inferred and needs to be manually implemented
 * We also don't consider the quality of the `hashCode()` implementation. They may take the same time, but result in poor hash distribution
-* Groovy 2.3.9 scored over 1000 ns/op on `equals()` with a similar error margin as below, prompting an upgrade to 2.4.3
 
 # Running
 
