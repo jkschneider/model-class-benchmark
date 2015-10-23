@@ -126,7 +126,7 @@ Allows comparison of expense of lazy initialisation of hashCode for lazy classes
     ModelBenchmark.firstHashCode          lombok  avgt   30    44.019 ±   1.494  ns/op
     ModelBenchmark.firstHashCode           scala  avgt   30   147.650 ±  29.696  ns/op
     ModelBenchmark.firstHashCode          kotlin  avgt   30    55.645 ±  19.007  ns/op
-    ModelBenchmark.firstHashCode      kotlinlazy  avgt   30   230.978 ±  27.861  ns/op
+    ModelBenchmark.firstHashCode      kotlinlazy  avgt   30    98.480 ±   4.027  ns/op
     ModelBenchmark.firstHashCode       autovalue  avgt   30    46.362 ±   2.225  ns/op
     ModelBenchmark.firstHashCode           guava  avgt   30    84.607 ±   1.704  ns/op
 
@@ -140,7 +140,7 @@ Allows comparison of expense of lazy initialisation of hashCode for lazy classes
     ModelBenchmark.hashCode               lombok  avgt   30    21.738 ±   0.223  ns/op
     ModelBenchmark.hashCode                scala  avgt   30    38.975 ±   0.362  ns/op
     ModelBenchmark.hashCode               kotlin  avgt   30    22.067 ±   0.186  ns/op
-    ModelBenchmark.hashCode           kotlinlazy  avgt   30     3.797 ±   0.058  ns/op
+    ModelBenchmark.hashCode           kotlinlazy  avgt   30    3.270  ±   0.056  ns/op
     ModelBenchmark.hashCode            autovalue  avgt   30    21.351 ±   0.196  ns/op
     ModelBenchmark.hashCode                guava  avgt   30    63.798 ±   0.686  ns/op
 
