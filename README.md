@@ -4,7 +4,7 @@ This is a quick study of the relative performance and size of the typical DTO me
 
 * Groovy 2.4.5 annotations
 * Scala 2.11.8 case classes
-* Kotlin 1.0.0-beta-1038 data classes
+* Kotlin 1.0.0-beta-1038 data classes, with a lazy implementation that caches the hash (in lieu of https://youtrack.jetbrains.com/issue/KT-5196)
 * Lombok 1.16.6 and AutoValue 1.1 annotation generated classes
 * Eclipse and IntelliJ auto-generated classes
 * Guava recommendations
